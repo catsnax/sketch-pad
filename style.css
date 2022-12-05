@@ -1,0 +1,21 @@
+.divBox{
+    padding: 18px;
+    border: 2px; 
+    border-style: solid;
+    margin: 0.3px;
+    background: white;
+    color: black;
+}
+
+.divBoxColored{
+    padding: 18px;
+    border: 2px; 
+    border-style: solid;
+    margin: 0.3px;
+    background-color: black;
+}
+
+.row{
+    display: flex;
+    margin-left: 25%;
+}
