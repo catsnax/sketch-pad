@@ -29,15 +29,38 @@ for(var i = 0; i < rows.length; i++){
     addColumn(rows[i]);
 }
 
-
+var htmlElements = "";
 
 function addColumn(targetRow){
-    for(var j = 0; j < 16 ; j++){
-    var column = document.createElement('div');
-    column.classList.add('divBox');
-    column.addEventListener("mouseover", () => tryFunction(element));
-    targetRow.appendChild(column);
+    
+    var column1 = createDiv();
+    var column2 = createDiv();
+    var column3 = createDiv();
+    var column4 = createDiv();
+    var column5 = createDiv();
+    var column6 = createDiv();
+    var column7 = createDiv();
+    var column8 = createDiv();
+    var column9 = createDiv();
+    var column10 = createDiv();
+    var column11 = createDiv();
+    var column12 = createDiv();
+    var column13 = createDiv();
+    var column14 = createDiv();
+    var column15 = createDiv();
+    var column16 = createDiv();
+    let columns = [column1, column2, column3, column4, column5, column6, column7, column8, column9, column10, column11, column12, column13, column14, column15, column16];
+    
+    for(var i = 0; i < columns.length; i++){
+        assignProperties(columns[i])
+        targetRow.appendChild(columns[i])
     }
+}
+
+
+function assignProperties(column){
+    column.classList.add('divBox');
+    column.addEventListener("click", () => tryFunction(column));
 }
 
 function createDiv(){
