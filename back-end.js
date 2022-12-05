@@ -1,4 +1,14 @@
+wholeFunction();
+
+myButton = document.querySelector('#button');
+myButton.addEventListener("click", () => wholeFunction());
+
+
+function wholeFunction(){
 const container = document.querySelector('#container');
+
+myButton = document.querySelector('#button');
+myButton.addEventListener("click", () => deleteRows());
 
 let row1 = createDiv();
 let row2 = createDiv();
@@ -29,10 +39,8 @@ for(var i = 0; i < rows.length; i++){
     addColumn(rows[i]);
 }
 
-var htmlElements = "";
 
 function addColumn(targetRow){
-    
     var column1 = createDiv();
     var column2 = createDiv();
     var column3 = createDiv();
@@ -60,7 +68,7 @@ function addColumn(targetRow){
 
 function assignProperties(column){
     column.classList.add('divBox');
-    column.addEventListener("click", () => tryFunction(column));
+    column.addEventListener("mouseover", () => tryFunction(column));
 }
 
 function createDiv(){
@@ -69,4 +77,10 @@ function createDiv(){
 
 function tryFunction(hello){
     hello.setAttribute('style', 'background: black; color: black');
+}
+function deleteRows(){
+    for(var i = 0; i < rows.length; i++){
+        rows[i].remove()
+    }
+}
 }
